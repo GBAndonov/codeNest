@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>tic-tac-toe</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/ticTacToe.js"></script> 
 </head>
-<body>
+<body onload = "startGame();">
 	<div class="tic-tac">
+	<div id = "message">
+	</div>
+	<div class="computer-play">
+		<input type="checkbox" id="computerPlay" /> <label for="computerPlay">play vs computer</label>
+	</div>
+	<div class="x-y-holder">
+		<div id="X-turn">
+			<p>X Turn</p>
+		</div>
+		<div>
+			
+		</div>
+		<div id="O-turn">
+			
+			<p>O Turn</p>
+		</div>
+	</div>
 		<table>
 			<tr>
-				<td>
+				<td id="s1" class="square" onclick="nextMove(this);">
 				</td>
-				<td>
+				<td id="s2" class="square" onclick="nextMove(this);">
 				</td>
-				<td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				</td>
-				<td>
-				</td>
-				<td>
+				<td id="s3" class="square" onclick="nextMove(this);">
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td id="s4" class="square" onclick="nextMove(this);">
 				</td>
-				<td>
+				<td id="s5" class="square" onclick="nextMove(this);">
 				</td>
-				<td>
+				<td id="s6" class="square" onclick="nextMove(this);">
+				</td>
+			</tr>
+			<tr>
+				<td id="s7" class="square" onclick="nextMove(this);">
+				</td>
+				<td id="s8" class="square" onclick="nextMove(this);">
+				</td>
+				<td id="s9" class="square" onclick="nextMove(this);">
 				</td>
 			</tr>
 		</table>
-		<div class="button">
-			<button class="restart">
+		<div class="button" id="reset-game">
+			<button  onclick="javascript:startGame();" class="restart">
 				NEW GAME	
 			</button>
 		</div>
+		
 	</div>
 </body>
-</html>
+</html>  
